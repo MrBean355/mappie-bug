@@ -4,6 +4,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.devtools.ksp)
+
+    // Working version:
+    // id("tech.mappie.plugin") version "2.2.21-1.6.1"
+
+    // Problematic version:
+    id("tech.mappie.plugin") version "2.2.21-2.0.0"
 }
 
 android {
@@ -42,4 +48,10 @@ kotlin {
 
 dependencies {
     implementation(libs.material)
+
+    // Working version:
+    // implementation("tech.mappie:mappie-api:2.2.21-1.6.1")
+
+    // Problematic version:
+    implementation("tech.mappie:mappie-api:2.2.21-2.0.0")
 }
